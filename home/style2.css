@@ -1,0 +1,94 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#head {
+    height: 80px;
+    background-color: black;
+
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 20px;
+}
+
+#mainheading {
+    color: white;
+}
+
+#nav {
+    display: flex;
+    gap: 20px;  /* space between links */
+}
+
+#nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    align-content: flex-end;
+}
+
+#nav a:hover {
+    color: orange;
+}
+#a{
+    height: 500px;
+    background-color: red;
+    width: 100%;
+}
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+  
+
+}
+.image {
+    height: 350px;
+    width: 350px;
+    margin: 0px;
+    padding: 0px;
+  
+}
+#endh{
+    color: orange;
+    font-size: 22px;
+}
+.fh{
+    color: aliceblue;
+    font-size: 20;
+    text-decoration: none;
+}
+#ab{
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+}
+.end{
+       display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-content: space-evenly;
+    margin-left: 0px;
+    margin-right: 0px;
+      border: 3px solid black;
+    background-color: black;
+}
+.btn{
+       background: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-top: 12px;
+    color: wheat;
+    text-decoration: none;
+}    
+.btn:hover{
+    transform: scale(1.2);
+    background-color: red;
+}
+.sh:hover{
+  transform: translateY(-7px) scale(1.00);
+  box-shadow: 2px 2px black ;
+}

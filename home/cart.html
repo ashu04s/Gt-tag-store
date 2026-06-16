@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pa{
+         background:#e74c3c;
+            color:white;
+            padding:10px 15px;
+            border:none;
+            border-radius:6px;
+            cursor:pointer;
+            width: 120px;
+            margin-left: 50%;
+        }
+        .pa:hover{
+            box-shadow: 2px 2px 10px gold;
+            background-color: black;
+        }
+        #pa{
+            margin-left: 40%;
+        }
+        #as{
+            width: 180px;
+            height: 50px;
+            background-color: orange;
+            cursor:pointer;
+            border-radius: 30px;
+        }
+        #as:hover{
+            background-color: aliceblue;
+            
+        }
+        
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+         <header id="head">
+        <h1 id="mainheading">
+            <b>GI-Tag Store</b>
+        </h1>
+        <nav id="nav">
+            <a href="home.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About-GI</a>
+            <a href="#contact"> Contact</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+    </header>
+    <br>
+    <br>
+    <button onclick="clearCart()" class="pa">
+<b><h2>Clear Cart</h2></b >
+</button>
+
+    <div id="cartBox"></div>
+<h3>Total: ₹ <span id="total">0</span></h3>
+<button id="as">Processed to Pay</button>
+ <footer id="contact">
+        <class class="end">
+            <div>
+                <h2 id="endh"> GI-Tag Store</h2>
+                <p class="fh">
+                    Promoting authentic <br> India heritage by <br>showcasing certiffied <br>GI-tagged products.
+                </p>
+
+            </div>
+            <div>
+                <h2 id="endh"> Contact Us</h2>
+                <p class="fh">Email : xyz@gmail.com</p>
+                <p class="fh">phone : 971146776</p>
+
+            </div>
+            <div>
+                <h2 id="endh">Quick Links</h2>
+                <ul>
+                    <li>
+                        <a href="home.html" class="fh">Home</a>
+                    </li>
+                    <li>
+                        <a href="shop.html" class="fh">Shop</a>
+
+                    </li>
+
+                    <li>
+                        <a href="about.html" class="fh">About-GI</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="fh"> Contact</a>
+                    </li>
+                </ul>
+
+
+
+
+
+            </div>
+        </class>
+        <h3 id="ab">2025 GI-Tag Store -- Promoting authentic Indian heritage.</h3>
+
+
+
+    </footer>
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+let box = document.getElementById("cartBox");
+let total = 0;
+
+cart.forEach(item => {
+  box.innerHTML += `
+    <div>
+      <img src="${item.image}" width="300" ><br>
+      ${item.name} - ₹${item.price}
+    </div>
+  `;
+  total += item.price;
+});
+
+document.getElementById("total").innerText = total;
+
+function clearCart(){
+  localStorage.removeItem("cart"); // cart data delete
+  location.reload(); 
+}
+</script>
+
+</script>
+
+</body>
+</html>

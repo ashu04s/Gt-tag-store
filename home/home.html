@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- for this nav bar -->
+    <header id="head">
+        <h1 id="mainheading">
+            <b>GI-Tag Store</b>
+        </h1>
+        <nav id="nav">
+            <a href="home.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About-GI</a>
+            <a href="#contact"> Contact</a>
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+    </header>
+    <section class="main">
+        <h1>Explore Authentic <br> GI-Tagged Products of <br>India</h1>
+        <p>Every product is certified and supports local artisans.</p>
+        <br>
+        <br>
+
+        <a href="shop.html" class="btn"><b>Shop Now</b></a>
+    </section>
+    <h2 id="s"> <b>Shop By State</b></h2>
+    <div id="shophere">
+        <div>
+            <a href="shop.html?state=haryana">
+><img class="shop" src="hr.png" class="sh" alt=""></a>
+            <h2>Haryana</h2>
+        </div>
+        <div> <a href="shop.html?state=bihar"><img class="shop" src="bihar.png" class="sh" alt=""></a>
+            <h2>Bihar</h2>
+        </div>
+
+        <div><a href="shop.html?state=gujarat"><img class="shop" src="gj.png" class="sh" alt=""></a>
+            <h2>Gujart</h2>
+        </div>
+        <div><a href="shop.html?state=jammu"><img class="shop" src="jk.png" class="sh" alt=""></a>
+            <h2>J and kasmir</h2>
+        </div>
+        <div> <a href="shop.html?state=kerla"><img class="shop" src="kerla.png" class="sh" alt=""></a>
+            <h2>Kerla</h2>
+        </div>
+        <div> <a href="shop.html?state=punjab"><img class="shop" src="pb.png" class="sh" alt=""></a>
+            <h2>Punjab</h2>
+        </div>
+        <div><a href="shop.html?state=rajasthan"><img class="shop" src="rj.png" class="sh" alt=""></a>
+            <h2>Rajastham</h2>
+        </div>
+        <div> <a href="shop.html?state=up"><img class="shop" src="up.png" class="sh" alt=""></a>
+            <h2>Uttar Pardesh</h2>
+        </div>
+
+
+
+
+
+    </div>
+    <h2 id="s"><b>Realted links</b></h2>
+    <div id="shophere">
+        <div> <img class="shop" src="\proucts\kerla\1.png" alt=""></a>
+            <h3>Aranmula metal mirror</h3>
+            <p>Price: ₹499</p>
+
+            <button  onclick="addToCart(' Aranmula metal mirror',499,'/proucts/kerla/1.png')"  class="btn">Add to Cart</onclick=>
+        </div>
+        <div> <img class="shop" src="\proucts\hr\1.png" alt=""></a>
+            <h3>Phulkari emroidery textile</h3>
+            <p>Price: ₹499</p>
+
+            <button  onclick="addToCart(' Phulkari emroidery textile',499,'/proucts/hr/1.png')" class="btn">Add to Cart</button>
+        </div>
+        <div> <img class="shop" src="\proucts\gj\1.png" alt=""></a>
+            <h3>Gir Kesar Mango</h3>
+            <p>Price: ₹499</p>
+
+            <button  onclick="addToCart(' Gir Kesar Mango',499,'/proucts/gj/1.png')" class="btn">Add to Cart</button>
+        </div>
+        <div> <img class="shop" src="\proucts\bihar\1.png" alt=""></a>
+            <h3>Madhubani</h3>
+            <p>Price: ₹499</p>
+
+            <button  onclick="addToCart(' Madhubani',499,'/proucts/bihar/1.png')" class="btn">Add to Cart</button>
+        </div>
+    </div>
+    <hr>
+    <footer id="contact">
+        <class class="end">
+            <div>
+                <h2 id="endh"> GI-Tag Store</h2>
+                <!-- <h2 id="endh"> Made by Ashu <br> Sushila Verma</h2> -->
+                <p class="fh">
+                    Promoting authentic <br> India heritage by <br>showcasing certiffied <br>GI-tagged products.
+                </p>
+                <!-- <h2 id="endh"> Made by Ashu <br> Sushila Verma</h2> -->
+
+            </div>
+            <div>
+                <h2 id="endh"> Contact Us</h2>
+                <p class="fh">Email : xyz@gmail.com</p>
+                <p class="fh">phone : 971146776</p>
+
+            </div>
+            <div>
+                <h2 id="endh">Quick Links</h2>
+                <ul>
+                    <li>
+                        <a href="home.html" class="fh">Home</a>
+                    </li>
+                    <li>
+                        <a href="shop.html" class="fh">Shop</a>
+
+                    </li>
+
+                    <li>
+                        <a href="about.html" class="fh">About-GI</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="fh"> Contact</a>
+                    </li>
+                </ul>
+
+
+
+
+
+            </div>
+        </class>
+        <h3 id="ab">2025 GI-Tag Store -- Promoting authentic Indian heritage.</h3>
+
+
+
+    </footer>
+    <script>
+        function addToCart(name, price, image) {
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  cart.push({
+    name: name,
+    price: price,
+    image: image
+  });
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  alert(name + " Added to Cart ");
+}
+let states = document.querySelectorAll(".sh");
+
+states.forEach(card => {
+  card.addEventListener("click", () => {
+    let state = card.dataset.state;
+    window.location.href =
+      "../product/product.html?state=" + state;
+  });
+});
+    </script>
+</body>
+
+</html
